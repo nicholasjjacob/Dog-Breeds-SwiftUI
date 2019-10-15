@@ -13,6 +13,8 @@
 		E140303E2355127900FD05FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E140303D2355127900FD05FD /* Assets.xcassets */; };
 		E14030412355127900FD05FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14030402355127900FD05FD /* Preview Assets.xcassets */; };
 		E14030442355127900FD05FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14030422355127900FD05FD /* LaunchScreen.storyboard */; };
+		E18DF272235679AF00B4B932 /* BreedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18DF271235679AF00B4B932 /* BreedData.swift */; };
+		E18DF27423567B0100B4B932 /* LabelsAndIconsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18DF27323567B0100B4B932 /* LabelsAndIconsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E14030402355127900FD05FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E14030432355127900FD05FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E14030452355127900FD05FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E18DF271235679AF00B4B932 /* BreedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedData.swift; sourceTree = "<group>"; };
+		E18DF27323567B0100B4B932 /* LabelsAndIconsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsAndIconsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				E14030422355127900FD05FD /* LaunchScreen.storyboard */,
 				E14030452355127900FD05FD /* Info.plist */,
 				E140303F2355127900FD05FD /* Preview Content */,
+				E18DF271235679AF00B4B932 /* BreedData.swift */,
+				E18DF27323567B0100B4B932 /* LabelsAndIconsView.swift */,
 			);
 			path = DogBreeds;
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 			files = (
 				E14030382355127700FD05FD /* AppDelegate.swift in Sources */,
 				E140303A2355127700FD05FD /* SceneDelegate.swift in Sources */,
+				E18DF272235679AF00B4B932 /* BreedData.swift in Sources */,
+				E18DF27423567B0100B4B932 /* LabelsAndIconsView.swift in Sources */,
 				E140303C2355127700FD05FD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

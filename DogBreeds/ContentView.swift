@@ -39,29 +39,17 @@ struct ContentView: View {
                         .padding(20)
                 }.padding(30)
             }
-        }.background(Image("backgroundLines").resizable().frame(width: UIScreen.main.bounds.width, height: 1100))
+            Spacer()
+            HStack {
+                LabelsAndIconsView()
+                Spacer()
+            }
+            
+        }.background(Image("backgroundLines")
+            .resizable()
+            .frame(width: UIScreen.main.bounds.width, height: 1100))
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
