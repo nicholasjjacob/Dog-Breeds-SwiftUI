@@ -8,7 +8,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DetailView: View {
+    
+    var dogBreedData: BreedData
+    
     var body: some View {
         VStack {
             // breed title
@@ -53,6 +56,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DetailView(dogBreedData: breeds[2])
     }
 }
