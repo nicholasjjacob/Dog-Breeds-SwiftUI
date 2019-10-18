@@ -13,44 +13,64 @@ struct DetailView: View {
     var dogBreedData: BreedData
     
     var body: some View {
-        VStack {
+        VStack (spacing: 0) {
             // breed title
-            Text("Akita")
-                .font(.custom("Paprus", size: 40))
+            Text(dogBreedData.breed)
+                .font(.custom("Helvetica", size: 30))
                 .fontWeight(.bold)
+                .foregroundColor(.white)
             ZStack {
                 Rectangle().frame(width: 370, height: 420)
                     .cornerRadius(30)
-                    .shadow(color: .white, radius: 30)
+                    .shadow(color: .init(white: 0.8), radius: 30)
                 Rectangle().frame(width: 350, height: 400)
                 .cornerRadius(30)
-                .shadow(color: .white, radius: 30)
+                .shadow(color: .init(white: 0.8), radius: 30)
                 
                 VStack {
                     // image
-                    Image("akita")
+                    Image(dogBreedData.imageName)
                         .resizable()
                         .scaledToFit()
                         .cornerRadius(15)
                         .padding(6)
                         .background(LinearGradient(gradient: Gradient(colors: [.white, .black, .white, .black, .white]), startPoint: .top, endPoint: .bottom)).cornerRadius(10).padding()
                     // image description
-                    Text("Akita is a muscular double coated dog of ancient Japanese lineage famous for her dignity, courage and loyalty.")
+                    Text(dogBreedData.description)
                         .lineLimit(10)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
-                        .padding(20)
-                }.padding(30)
+                }.padding(35)
             }
             Spacer()
             HStack {
-                LabelsAndIconsView()
-                Spacer()
+                LabelsAndIconView()
+                HStack {
+                    VStack(alignment: .leading) {
+                        DisplayDataLabels(label: dogBreedData.group)
+                        DisplayDataLabels(label: dogBreedData.height)
+                        DisplayDataLabels(label: dogBreedData.weight)
+                        DisplayDataLabels(label: dogBreedData.lifeExpectancy)
+                        DisplayDataLabels(label: dogBreedData.breedPopularity)
+                    }
+                }
             }
-            
         }.background(Image("backgroundLines")
             .resizable()
             .frame(width: UIScreen.main.bounds.width, height: 1100))
+    }
+}
+
+struct DisplayDataLabels: View {
+    var label = ""
+    
+    var body: some View {
+        VStack {
+            Text(label)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(.leading, 10)
+        }.padding(22)
     }
 }
 

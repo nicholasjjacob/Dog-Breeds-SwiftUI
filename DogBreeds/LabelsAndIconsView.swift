@@ -8,31 +8,21 @@
 
 import SwiftUI
 
-struct LabelsAndIconsView: View {
+
+
+struct LabelsAndIconView : View {
+    
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(labelsAndIcons) { item in
-                PositionAndModifier(label: item.label, icon: item.icon)
+            ForEach(labelsAndIcons) {
+                item in PositionAndModifier(label: item.label, icon: item.icon)
             }
         }.frame(maxWidth: 200, maxHeight: 350)
     }
 }
 
-struct Item: Identifiable {
-    var id = UUID()
-    var label: String
-    var icon: String
-}
-
-let labelsAndIcons = [
-    Item(label: "AKC Group", icon: "group"),
-    Item(label: "Height", icon: "height"),
-    Item(label: "Weight", icon: "weight"),
-    Item(label: "Lifespan", icon: "lifespan"),
-    Item(label: "Popularity", icon: "popularity")
-]
-
-struct PositionAndModifier: View {
+//this struct is resposible for positioning, sizing, and coloring the icons and labels
+struct PositionAndModifier : View {
     var label = ""
     var icon = ""
     
@@ -46,13 +36,19 @@ struct PositionAndModifier: View {
                 .font(.headline)
                 .foregroundColor(.orange)
                 .padding(.leading, 10)
-        }.padding(10)
-    }
+            }.padding(10)
+     }
 }
 
+let labelsAndIcons = [
+Item(label: "AKC Group:", icon: "group"),
+Item(label: "Height:", icon: "height"),
+Item(label: "Weight:", icon: "weight"),
+Item(label: "Lifespan:", icon: "lifespan"),
+Item(label: "Popularity:", icon: "popularity")]
 
-struct LabelsAndIconView_Previews: PreviewProvider {
-    static var previews: some View {
-        LabelsAndIconsView().previewLayout(.sizeThatFits)
-    }
+struct Item : Identifiable {
+    var id = UUID()
+    var label: String
+    var icon: String
 }
